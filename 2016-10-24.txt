@@ -1,0 +1,63 @@
+1、苹果公司四十年来里程碑式的产品有哪些？
+
+
+iMac (1998)
+
+ipod/ipod touch播放器(2001)
+
+iphone(2007)
+
+MacBook(2008)
+
+iPad平板电脑(2010)
+
+applewatch(2014)
+
+appleTV(2015)
+
+2、观看某一期的WWDC（苹果全球开发者大会）视频，苹果官网地址https://developer.apple.com/videos/ 或http://it.sohu.com/20150609/n414667890.shtml写出自己的感受：
+
+网络有问题，但还是观看了What's New in Swift 3 - Apple WWDC 2016
+https://www.youtube.com/watch?v=Jmjlmn0jHbw
+
+观后感：
+
+该视频谈了关于Swift3的新特性，
+
+一、Swift2和Swift3的代码写法差异
+例：
+新的集合索引模型
+集合移动它们的索引
+
+Swift2:
+
+i = collection.startIndex
+next = i. successor()
+
+Swift3:
+
+i= collection.startIndex
+next = collection.index(after: i)
+
+二、仔细研究API设计中的要点：
+1.努力清晰，避免不简洁和冗长
+2.捕捉基本信息
+3.省略重定向信息/样板
+
+例子：
+
+void CGContextFillPath(CGContextRef)
+NS_SWIFT_NAME(CGContext.fillPath(self:));
+
+Swift2:
+
+func CGContextFillPath(_: CGContext)
+
+Swift3
+
+extension CGContext{
+func fillPath()
+}
+详情见：https://swift.org/documentation/api-design-guidelines
+
+三、重要的是：Swift3建立在一个开源的社区的基础上。
